@@ -25,4 +25,6 @@ module.exports.cadastrar = function(application, req, res) {
         UsuariosDAO.inserirUsuario(dadosForm);
 
         res.send('Podemos cadastrar!');
+
+        consol.log("tijolo")
 }
