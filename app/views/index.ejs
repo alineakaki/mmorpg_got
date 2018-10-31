@@ -14,6 +14,12 @@
 		<!-- incluindo css -->
 		<link href="css/style.css" rel="stylesheet">
 
+		<script>
+				function reply_click(clicked_id){
+					window.location.href="/cadastro";
+				};
+		</script>
+
 	</head>
 
 	<body class="body-index">
@@ -37,7 +43,7 @@
 						<input type="text" name="usuario" id="usuario" placeholder="Usuário" class="form-control" autocomplete="off" />
 						<input type="password" name="senha" id="senha" placeholder="Senha" class="form-control" />
 						<button type="submit" class="btn btn-success">Entrar</button>
-						<button type="button" class="btn btn-info">Cadastro</button>
+						<button type="button" class="btn btn-info" onClick="reply_click(this.id)">Cadastro</button>
 					</div>
 				</form>
 			</div>

@@ -2,6 +2,10 @@ module.exports.cadastro = function(application, req, res) {
    res.render('cadastro', {validacao : {}, dadosForm: {}});
 }
 
+module.exports.cadastro_sucesso = function(application, req, res) {
+    res.render('cadastro_sucesso', {validacao : {}, dadosForm: {}});
+ }
+
 module.exports.cadastrar = function(application, req, res) {
     var dadosForm = req.body;
 
@@ -15,7 +19,7 @@ module.exports.cadastrar = function(application, req, res) {
     if(erros) {
         res.render('cadastro', {validacao : erros, dadosForm : dadosForm});
         return;
-    }   
+    }
 
         var connection = application.config.dbConnection;
 
@@ -30,5 +34,5 @@ module.exports.cadastrar = function(application, req, res) {
 
         // geração dos parametros
 
-        res.send('Podemos cadastrar!');
+        res.render('cadastro_sucesso')
 }

@@ -19,6 +19,4 @@ module.exports.autenticar = function(application, req, res) {
     var UsuariosDAO = new DAO(new connection());
 
     UsuariosDAO.autenticar(dadosForm, req, res);
-
-    //res.send('Tudo ok!');
 }
